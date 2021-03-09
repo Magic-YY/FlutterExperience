@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app_test/NewRoute.dart';
 
 void main() {
   runApp(MyApp());
@@ -58,6 +60,21 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
+            ),
+            FlatButton(
+              child: Text("open new route 1"),
+              textColor: Colors.blue,
+              onPressed: (){
+                // 导航到新的路由
+                Navigator.push(context, MaterialPageRoute(builder: (context){
+                  return NewRoute();
+                }, fullscreenDialog: false));
+                // 等同于上方法
+                // Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                //   return NewRoute();
+                // }, fullscreenDialog: false));
+
+              },
             ),
           ],
         ),
