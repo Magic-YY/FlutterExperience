@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_test/NewRoute.dart';
+import 'package:flutter_app_test/RouterTestRoute.dart';
 
 void main() {
   runApp(MyApp());
@@ -67,7 +68,8 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: (){
                 // 导航到新的路由
                 Navigator.push(context, MaterialPageRoute(builder: (context){
-                  return NewRoute();
+                  // return NewRoute();
+                  return RouterTestRoute();
                 }, fullscreenDialog: false));
                 // 等同于上方法
                 // Navigator.of(context).push(MaterialPageRoute(builder: (context){
